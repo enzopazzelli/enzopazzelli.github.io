@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--estilos-->
+  <link rel="stylesheet" href="stylessi.css">
+  <!--bootstrap-->
+
+  <!--fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Michroma&family=Overpass:ital,wght@0,100;0,200;1,100;1,200&family=Titillium+Web:ital,wght@0,200;1,200;1,400&display=swap"
+    rel="stylesheet">
+  <!--font-awesome-->
+  <script src="https://kit.fontawesome.com/1be1c5ed1d.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>BIBLIO.TEK</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo nav-link">Biblio.tek</a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link" id="botonLibros">Libros</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">Editoriales</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="login.html" class="nav-menu-link nav-link">Registrarse</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link"><i class="fa-solid fa-cart-plus"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="contenedorSlider">
+    <div class="slider-frame">
+      <ul>
+        <li><img src="img/fondo.jpg" alt=""></li>
+        <li><img src="img/fondo2.jpg" alt=""></li>
+        <li><img src="img/fondo3.jpg" alt=""></li>
+        <li><img src="img/sc.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <!-------------------------hasta aqui no tocar -------------------->
+  <div class="fila" id="cards"></div>
+  <div class="contenedorCarrito">
+
+    <div class="container">
+      <h4>Carrito de compras</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Libro</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col"> </th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+
+
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+          <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+            Vaciar carrito
+          </button>
+          <button class="btn-info btn-sm" type="submit" id="continuar-compra">Continuar compra</button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+      </template>
+
+      <template id="template-carrito">
+        <tr>
+          <th scope="row">id</th>
+          <td>Café</td>
+          <td>1</td>
+          <td>
+            <button class="btn btn-info btn-sm">
+              +
+            </button>
+            <button class="btn btn-danger btn-sm">
+              -
+            </button>
+          </td>
+          <td>$ <span>500</span></td>
+        </tr>
+      </template>
+    </div>
+  </div>
+
+  <footer>
+    <p class="pie">Esta pagina es la version 2 de 3 del Proyecto Integrador. El primero era solo el maquetado y estaba
+      bastante feo.
+      Este, el segundo, tiene Javascript y un poco de funcionalidad. El tercero estuvo en proceso haasta ultimo
+      momento, pero por complicaciones con JS, decidimos presentar este documento y seguir trabajando en el otro.
+    </p>
+    <div class="contact-container">
+      <div class="about-us">
+        <h4>Contacto personal:</h4>
+        <ul>
+          <li class="us">
+            <a href="mailto:roespeche1@gmail.com">Maria Rocio Espeche</a>
+          </li>
+          <li class="us">
+            <a href="mailto:enzopazzelli1@gmail.com">Enzo Jose Pazzelli</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="red-container">
+        <h4>Seguinos en nuestras redes</h4>
+        <ul>
+          <li class="redes"><a href=""><i class="fa-brands fa-discord"></i> /m1</a></li>
+          <li class="redes"><a href=""><i class="fa-brands fa-whatsapp"></i> +99 999 9999 9999</a></li>
+          <li class="redes"><a href=""><i class="fa-brands fa-instagram"></i> biblio.tek</a></li>
+          <li class="redes"><a href=""><i class="fa-brands fa-facebook"></i> biblio.tek</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="indexsi.js"></script>
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
