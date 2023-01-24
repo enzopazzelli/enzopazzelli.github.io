@@ -152,7 +152,7 @@ const hacerFooter = () => {
   const botonContinuar = document.getElementById("continuar-compra");
   botonContinuar.addEventListener('click', ()=>{
     
-     alert('Acabas de comprar '+nCantidad+' libros' );  
+     alert('La compra ha sido exitosa' );  
    
     carrito = {};    
     hacerCarrito()
